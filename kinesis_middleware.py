@@ -1,11 +1,9 @@
 import logging
 
-from django.utils.deprecation import MiddlewareMixin
-
 LOG = logging.getLogger('kinesis_middleware')
 
 
-class KinesisMiddleware(MiddlewareMixin):
+class KinesisMiddleware:
     """
     Middleware that intercepts requests and sends request data related to certain methods/models
     to AWS Kinesis stream.
